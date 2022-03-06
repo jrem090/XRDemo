@@ -1,0 +1,18 @@
+<!-- include A-Frame obviously -->
+<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<!-- include A-Frame extras for animations-->
+<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+<!-- include for AR -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/16/Stats.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image.prod.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image-aframe.prod.js"></script>
+
+<body>
+    <a-scene>
+      <a-camera position="0 0 0" movementcontrols ="controls: touch"></a-camera>
+      <!--<a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>-->
+      <a-entity position="-1 -1 -3" gltf-model="https://raw.githubusercontent.com/jrem090/XRDemo/master/models/avatar-wave.glb" animation-mixer>
+    </a-scene>
+  </body>
+
+
