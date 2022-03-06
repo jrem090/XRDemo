@@ -8,18 +8,19 @@
       
       <!-- Player. -->
       <a-entity id="rig"
-                movement-controls="constrainToNavMesh: true;
-                                   controls: checkpoint, gamepad, trackpad, keyboard, touch;"
+                movement-controls="controls: checkpoint, gamepad, trackpad, keyboard, touch;"
                 position="0 0 -1">
         <a-entity camera
-                  position="0 1.6 0"
+                  position="0 1.2 0"
                   look-controls="pointerLockEnabled: true">
           <a-cursor></a-cursor>
         </a-entity>
       </a-entity>
 
-
-      <a-box position="-5 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-light not-mobile type="point" intensity="1.5" color="#FFAAAA" distance="50" position="-4 4.5 -3"></a-light>
+      <a-light not-mobile type="point" intensity="1.5" color="#AAAAEE" distance="50" position="4 4.5 -3"></a-light>
+      <a-box id="first" position="-3 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-box id="cage" position="0 4.9 0" scale="10 10 10" rotation="0 45 0" color="#999999" side="back"></a-box>
       <a-entity position="-1 0 -3" gltf-model="https://raw.githubusercontent.com/jrem090/XRDemo/master/models/avatar-wave.glb" animation-mixer>
     </a-scene>
   </body>
