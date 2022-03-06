@@ -9,7 +9,20 @@
 
 <body>
     <a-scene>
-      <a-camera position="0 0 0" movement-controls ="controls: touch"></a-camera>
+      
+      <!-- Player. -->
+      <a-entity id="rig"
+                movement-controls="constrainToNavMesh: true;
+                                   controls: checkpoint, gamepad, trackpad, keyboard, touch;"
+                position="-7 0 1">
+        <a-entity camera
+                  position="0 1.6 0"
+                  look-controls="pointerLockEnabled: true">
+          <a-cursor></a-cursor>
+        </a-entity>
+      </a-entity>
+
+      
       <a-box position="-5 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
       <a-entity position="-1 -1 -3" gltf-model="https://raw.githubusercontent.com/jrem090/XRDemo/master/models/avatar-wave.glb" animation-mixer>
     </a-scene>
